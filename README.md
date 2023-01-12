@@ -11,4 +11,6 @@
 
 - Recommended `node js 16.x` and `npm 6+`. (suggestion v16.15.0)
 - Install dependencies: `npm install` / `yarn install`
+- Create environment file named `.env` at root filder.
+- Place `REACT_APP_BASE_URL=https://www.majorcineplex.com/apis` in the file.
 - Start the project: `npm run start` / `yarn start`
