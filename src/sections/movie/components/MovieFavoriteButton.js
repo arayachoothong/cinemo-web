@@ -28,13 +28,15 @@ export default function MovieFavoriteButton({ movie }) {
   const favorites = useSelector((state) => state.favorite.favorites);
   const dispatch = useDispatch();
 
-  const addToFavorite = () => {
+  const addToFavorite = (e) => {
+    e.stopPropagation();
     const isInFavorite = favorites.some((el) => el.id === movie.id);
     if (isInFavorite) return;
     dispatch(addFavorites(movie));
   };
 
-  const removeFromFavorite = () => {
+  const removeFromFavorite = (e) => {
+    e.stopPropagation();
     dispatch(removeFavorites(movie));
   };
 
